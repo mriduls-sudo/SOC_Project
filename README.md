@@ -34,7 +34,6 @@ Using canal geometry from the Global River and Irrigation Network (GRAIN) datase
 
 - Continental United States (CONUS)  
 - Focus on irrigation-intensive regions (e.g., Western U.S., High Plains)  
-- Alaska and Hawaii excluded  
 
 
 
