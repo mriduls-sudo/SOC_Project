@@ -1,0 +1,137 @@
+Config file config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 36
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+cleanup_pixc               1
+compute                    1
+dem                        1
+extract_chunk              4
+merge_chunks               1
+wait_for_all_chunks        1
+total                     10
+
+Select jobs to execute...
+Execute 4 jobs...
+[Sun Feb 22 13:48:41 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_5154_5604/extraction_complete.flag
+    jobid: 18
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_5154_5604/extraction_complete.flag
+    wildcards: start=5154, end=5604
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Sun Feb 22 13:48:41 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_4704_5154/extraction_complete.flag
+    jobid: 17
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_4704_5154/extraction_complete.flag
+    wildcards: start=4704, end=5154
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Sun Feb 22 13:48:41 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_2454_2904/extraction_complete.flag
+    jobid: 12
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_2454_2904/extraction_complete.flag
+    wildcards: start=2454, end=2904
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Sun Feb 22 13:48:41 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11004_11454/extraction_complete.flag
+    jobid: 31
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11004_11454/extraction_complete.flag
+    wildcards: start=11004, end=11454
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Mon Feb 23 05:38:11 2026]
+Finished jobid: 12 (Rule: extract_chunk)
+1 of 10 steps (10%) done
+[Mon Feb 23 05:39:31 2026]
+Finished jobid: 18 (Rule: extract_chunk)
+2 of 10 steps (20%) done
+[Mon Feb 23 07:21:40 2026]
+Finished jobid: 17 (Rule: extract_chunk)
+3 of 10 steps (30%) done
+[Mon Feb 23 11:05:39 2026]
+Finished jobid: 31 (Rule: extract_chunk)
+4 of 10 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Feb 23 11:05:39 2026]
+localrule wait_for_all_chunks:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_204_654/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_654_1104/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_1104_1554/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_1554_2004/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_2004_2454/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_2454_2904/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_2904_3354/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_3354_3804/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_3804_4254/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_4254_4704/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_4704_5154/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_5154_5604/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_5604_6054/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_6054_6504/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_6504_6954/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_6954_7404/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_7404_7854/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_7854_8304/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_8304_8754/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_8754_9204/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_9204_9654/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_9654_10104/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_10104_10554/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_10554_11004/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11004_11454/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11454_11904/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11904_12354/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_12354_12804/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_12804_13254/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_13254_13704/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_13704_14154/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_14154_14604/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_14604_15054/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_15054_15504/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_15504_15954/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_15954_16404/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_16404_16854/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_16854_17304/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_17304_17754/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_17754_18204/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_18204_18654/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_18654_19104/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_19104_19554/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_19554_20004/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_20004_20454/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_20454_20904/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_20904_21354/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_21354_21804/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_21804_22254/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_22254_22704/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_22704_23154/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_23154_23604/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_23604_24054/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_24054_24504/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_24504_24954/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_24954_25404/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_25404_25711/extraction_complete.flag
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/all_chunks_complete.flag
+    jobid: 5
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/all_chunks_complete.flag; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11004_11454/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_5154_5604/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_2454_2904/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_4704_5154/extraction_complete.flag
+    resources: tmpdir=/tmp
+[Mon Feb 23 11:05:40 2026]
+Finished jobid: 5 (Rule: wait_for_all_chunks)
+5 of 10 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Feb 23 11:05:40 2026]
+localrule merge_chunks:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/all_chunks_complete.flag
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/extraction_complete.flag
+    jobid: 4
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/extraction_complete.flag; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/all_chunks_complete.flag
+    resources: tmpdir=/tmp
+[Mon Feb 23 11:05:40 2026]
+Finished jobid: 4 (Rule: merge_chunks)
+6 of 10 steps (60%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Feb 23 11:05:40 2026]
+localrule cleanup_pixc:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/extraction_complete.flag
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_downloads/cleanup_complete.flag
+    jobid: 3
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_downloads/cleanup_complete.flag; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/extraction_complete.flag
+    resources: tmpdir=/tmp
+[Mon Feb 23 11:06:17 2026]
+Finished jobid: 3 (Rule: cleanup_pixc)
+7 of 10 steps (70%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Feb 23 11:06:17 2026]
+localrule compute:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_downloads/cleanup_complete.flag
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/metrics/wse_metrics.csv
+    jobid: 2
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/metrics/wse_metrics.csv; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_downloads/cleanup_complete.flag
+    resources: tmpdir=/tmp
+[Mon Feb 23 12:18:59 2026]
+Finished jobid: 2 (Rule: compute)
+8 of 10 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Feb 23 12:18:59 2026]
+localrule dem:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/metrics/wse_metrics.csv
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/metrics/wse_dem_slope_comparison.csv
+    jobid: 1
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/metrics/wse_dem_slope_comparison.csv; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/metrics/wse_metrics.csv
+    resources: tmpdir=/tmp
+[Mon Feb 23 12:32:20 2026]
+Finished jobid: 1 (Rule: dem)
+9 of 10 steps (90%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Feb 23 12:32:20 2026]
+localrule all:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/metrics/wse_dem_slope_comparison.csv, /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/run_metadata/run_config.yaml
+    jobid: 0
+    reason: Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/metrics/wse_dem_slope_comparison.csv
+    resources: tmpdir=/tmp
+[Mon Feb 23 12:32:20 2026]
+Finished jobid: 0 (Rule: all)
+10 of 10 steps (100%) done
+Complete log(s): /home/mriduls/swot_play/SOGRAIN2.0/pipeline_chunking/.snakemake/log/2026-02-22T134840.986992.snakemake.log

@@ -1,0 +1,92 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+cleanup_pixc        1
+compute             1
+dem                 1
+extract             1
+total               5
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 06:17:20 2026]
+localrule extract:
+    input: pixc_planning/pixc_to_grains.json
+    output: extracted_points/extraction_complete.flag
+    jobid: 4
+    reason: Missing output files: extracted_points/extraction_complete.flag
+    resources: tmpdir=/tmp
+[Sun Feb 15 06:22:10 2026]
+Finished jobid: 4 (Rule: extract)
+1 of 5 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 06:22:10 2026]
+localrule cleanup_pixc:
+    input: extracted_points/extraction_complete.flag
+    output: pixc_downloads/cleanup_complete.flag
+    jobid: 3
+    reason: Missing output files: pixc_downloads/cleanup_complete.flag; Input files updated by another job: extracted_points/extraction_complete.flag
+    resources: tmpdir=/tmp
+[Sun Feb 15 06:22:20 2026]
+Finished jobid: 3 (Rule: cleanup_pixc)
+2 of 5 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 06:22:20 2026]
+localrule compute:
+    input: pixc_downloads/cleanup_complete.flag
+    output: metrics/wse_metrics.csv
+    jobid: 2
+    reason: Missing output files: metrics/wse_metrics.csv; Input files updated by another job: pixc_downloads/cleanup_complete.flag
+    resources: tmpdir=/tmp
+[Sun Feb 15 06:22:21 2026]
+Finished jobid: 2 (Rule: compute)
+3 of 5 steps (60%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 06:22:21 2026]
+localrule dem:
+    input: metrics/wse_metrics.csv
+    output: metrics/wse_dem_slope_comparison.csv
+    jobid: 1
+    reason: Missing output files: metrics/wse_dem_slope_comparison.csv; Input files updated by another job: metrics/wse_metrics.csv
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/home/mriduls/swot_play/SOGRAIN2.0/pipeline/Snakefile", line 72:
+Command 'set -euo pipefail;  
+        python scripts/dem_sample.py             --config config.yaml             --region us-pacific' returned non-zero exit status 2.
+[Sun Feb 15 06:22:22 2026]
+Error in rule dem:
+    message: None
+    jobid: 1
+    input: metrics/wse_metrics.csv
+    output: metrics/wse_dem_slope_comparison.csv
+    shell:
+        
+        python scripts/dem_sample.py             --config config.yaml             --region us-pacific
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sun Feb 15 06:22:22 2026]
+Error in rule dem:
+    message: None
+    jobid: 1
+    input: metrics/wse_metrics.csv
+    output: metrics/wse_dem_slope_comparison.csv
+    shell:
+        
+        python scripts/dem_sample.py             --config config.yaml             --region us-pacific
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/swot_play/SOGRAIN2.0/pipeline/.snakemake/log/2026-02-15T061720.081488.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

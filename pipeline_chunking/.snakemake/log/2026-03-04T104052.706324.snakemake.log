@@ -1,0 +1,209 @@
+Config file config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=Resource("mem_mb", 128000)
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+cleanup_pixc               1
+compute                    1
+dem                        1
+extract_chunk              9
+merge_chunks               1
+wait_for_all_chunks        1
+total                     15
+
+Select jobs to execute...
+Execute 9 jobs...
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_7001_8001/extraction_complete.flag
+    jobid: 14
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_7001_8001/extraction_complete.flag
+    wildcards: start=7001, end=8001
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_18001_18905/extraction_complete.flag
+    jobid: 25
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_18001_18905/extraction_complete.flag
+    wildcards: start=18001, end=18905
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_10001_11001/extraction_complete.flag
+    jobid: 17
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_10001_11001/extraction_complete.flag
+    wildcards: start=10001, end=11001
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_6001_7001/extraction_complete.flag
+    jobid: 13
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_6001_7001/extraction_complete.flag
+    wildcards: start=6001, end=7001
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_5001_6001/extraction_complete.flag
+    jobid: 12
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_5001_6001/extraction_complete.flag
+    wildcards: start=5001, end=6001
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_9001_10001/extraction_complete.flag
+    jobid: 16
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_9001_10001/extraction_complete.flag
+    wildcards: start=9001, end=10001
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_12001_13001/extraction_complete.flag
+    jobid: 19
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_12001_13001/extraction_complete.flag
+    wildcards: start=12001, end=13001
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_8001_9001/extraction_complete.flag
+    jobid: 15
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_8001_9001/extraction_complete.flag
+    wildcards: start=8001, end=9001
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 10:40:53 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_11001_12001/extraction_complete.flag
+    jobid: 18
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_11001_12001/extraction_complete.flag
+    wildcards: start=11001, end=12001
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Wed Mar  4 12:16:18 2026]
+Finished jobid: 19 (Rule: extract_chunk)
+1 of 15 steps (7%) done
+[Wed Mar  4 23:46:38 2026]
+Finished jobid: 13 (Rule: extract_chunk)
+2 of 15 steps (13%) done
+[Thu Mar  5 08:29:31 2026]
+Finished jobid: 15 (Rule: extract_chunk)
+3 of 15 steps (20%) done
+[Thu Mar  5 10:37:38 2026]
+Finished jobid: 14 (Rule: extract_chunk)
+4 of 15 steps (27%) done
+[Thu Mar  5 12:29:38 2026]
+Finished jobid: 16 (Rule: extract_chunk)
+5 of 15 steps (33%) done
+[Thu Mar  5 13:01:38 2026]
+Finished jobid: 25 (Rule: extract_chunk)
+6 of 15 steps (40%) done
+[Fri Mar  6 02:22:39 2026]
+Finished jobid: 17 (Rule: extract_chunk)
+7 of 15 steps (47%) done
+[Sat Mar  7 11:49:10 2026]
+Finished jobid: 12 (Rule: extract_chunk)
+8 of 15 steps (53%) done
+[Sat Mar  7 16:29:34 2026]
+Finished jobid: 18 (Rule: extract_chunk)
+9 of 15 steps (60%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Mar  7 16:29:34 2026]
+localrule wait_for_all_chunks:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_1_1001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_1001_2001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_2001_3001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_3001_4001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_4001_5001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_5001_6001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_6001_7001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_7001_8001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_8001_9001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_9001_10001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_10001_11001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_11001_12001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_12001_13001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_13001_14001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_14001_15001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_15001_16001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_16001_17001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_17001_18001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_18001_18905/extraction_complete.flag
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/all_chunks_complete.flag
+    jobid: 5
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/all_chunks_complete.flag; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_6001_7001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_7001_8001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_18001_18905/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_9001_10001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_11001_12001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_12001_13001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_10001_11001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_8001_9001/extraction_complete.flag, /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/chunk_5001_6001/extraction_complete.flag
+    resources: tmpdir=/tmp
+[Sat Mar  7 16:29:35 2026]
+Finished jobid: 5 (Rule: wait_for_all_chunks)
+10 of 15 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Mar  7 16:29:35 2026]
+localrule merge_chunks:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/all_chunks_complete.flag
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/extraction_complete.flag
+    jobid: 4
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/extraction_complete.flag; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/all_chunks_complete.flag
+    resources: tmpdir=/tmp
+[Sat Mar  7 16:29:35 2026]
+Finished jobid: 4 (Rule: merge_chunks)
+11 of 15 steps (73%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Mar  7 16:29:35 2026]
+localrule cleanup_pixc:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/extraction_complete.flag
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_downloads/cleanup_complete.flag
+    jobid: 3
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_downloads/cleanup_complete.flag; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/extracted_points/extraction_complete.flag
+    resources: tmpdir=/tmp
+[Sat Mar  7 16:31:23 2026]
+Finished jobid: 3 (Rule: cleanup_pixc)
+12 of 15 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Mar  7 16:31:23 2026]
+localrule compute:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_downloads/cleanup_complete.flag
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_metrics.csv
+    jobid: 2
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_metrics.csv; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/pixc_downloads/cleanup_complete.flag
+    resources: tmpdir=/tmp
+[Sat Mar  7 17:18:22 2026]
+Finished jobid: 2 (Rule: compute)
+13 of 15 steps (87%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Mar  7 17:18:22 2026]
+localrule dem:
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_metrics.csv
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_dem_slope_comparison.csv
+    jobid: 1
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_dem_slope_comparison.csv; Input files updated by another job: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_metrics.csv
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/home/mriduls/swot_play/SOGRAIN2.0/pipeline_chunking/Snakefile", line 195:
+Command 'set -euo pipefail;  
+        python scripts/dem_sample.py             --config config.yaml             --region egypt             --canal_start 1             --canal_end 18905' returned non-zero exit status 1.
+[Sat Mar  7 17:30:36 2026]
+Error in rule dem:
+    message: None
+    jobid: 1
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_metrics.csv
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_dem_slope_comparison.csv
+    shell:
+        
+        python scripts/dem_sample.py             --config config.yaml             --region egypt             --canal_start 1             --canal_end 18905
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sat Mar  7 17:30:36 2026]
+Error in rule dem:
+    message: None
+    jobid: 1
+    input: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_metrics.csv
+    output: /water1/mriduls/SOGRAIN_Analysis/egypt_from_1_to_18905/metrics/wse_dem_slope_comparison.csv
+    shell:
+        
+        python scripts/dem_sample.py             --config config.yaml             --region egypt             --canal_start 1             --canal_end 18905
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/swot_play/SOGRAIN2.0/pipeline_chunking/.snakemake/log/2026-03-04T104052.706324.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

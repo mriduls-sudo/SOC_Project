@@ -1,0 +1,26 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+cleanup_pixc        1
+compute             1
+dem                 1
+extract             1
+plan                1
+total               6
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Feb 14 15:34:27 2026]
+localrule plan:
+    output: pixc_planning/pixc_to_grains.json
+    jobid: 5
+    reason: Missing output files: pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+Terminating processes on user request, this might take some time.

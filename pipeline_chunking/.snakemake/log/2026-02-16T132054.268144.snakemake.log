@@ -1,0 +1,863 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-7.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+cleanup_pixc               1
+compute                    1
+dem                        1
+extract_chunk             24
+merge_chunks               1
+plan                       1
+save_run_metadata          1
+wait_for_all_chunks        1
+total                     32
+
+Select jobs to execute...
+Execute 2 jobs...
+[Mon Feb 16 13:20:54 2026]
+localrule save_run_metadata:
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/run_metadata/run_config.yaml
+    jobid: 31
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/run_metadata/run_config.yaml; Code has changed since last execution
+    resources: tmpdir=/tmp
+[Mon Feb 16 13:20:54 2026]
+localrule plan:
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    jobid: 7
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+[Mon Feb 16 13:20:56 2026]
+Finished jobid: 31 (Rule: save_run_metadata)
+1 of 32 steps (3%) done
+[Mon Feb 16 14:42:28 2026]
+Finished jobid: 7 (Rule: plan)
+2 of 32 steps (6%) done
+Select jobs to execute...
+Execute 24 jobs...
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92062_92112/extraction_complete.flag
+    jobid: 21
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92062_92112/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92062, end=92112
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92012_92062/extraction_complete.flag
+    jobid: 20
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92012_92062/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92012, end=92062
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91962_92012/extraction_complete.flag
+    jobid: 19
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91962_92012/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91962, end=92012
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91912_91962/extraction_complete.flag
+    jobid: 18
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91912_91962/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91912, end=91962
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91862_91912/extraction_complete.flag
+    jobid: 17
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91862_91912/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91862, end=91912
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91812_91862/extraction_complete.flag
+    jobid: 16
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91812_91862/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91812, end=91862
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91762_91812/extraction_complete.flag
+    jobid: 15
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91762_91812/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91762, end=91812
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92512_92547/extraction_complete.flag
+    jobid: 30
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92512_92547/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92512, end=92547
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91712_91762/extraction_complete.flag
+    jobid: 14
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91712_91762/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91712, end=91762
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92462_92512/extraction_complete.flag
+    jobid: 29
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92462_92512/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92462, end=92512
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91662_91712/extraction_complete.flag
+    jobid: 13
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91662_91712/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91662, end=91712
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92412_92462/extraction_complete.flag
+    jobid: 28
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92412_92462/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92412, end=92462
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91612_91662/extraction_complete.flag
+    jobid: 12
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91612_91662/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91612, end=91662
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92362_92412/extraction_complete.flag
+    jobid: 27
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92362_92412/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92362, end=92412
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91562_91612/extraction_complete.flag
+    jobid: 11
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91562_91612/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91562, end=91612
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92312_92362/extraction_complete.flag
+    jobid: 26
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92312_92362/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92312, end=92362
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92262_92312/extraction_complete.flag
+    jobid: 25
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92262_92312/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92262, end=92312
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91512_91562/extraction_complete.flag
+    jobid: 10
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91512_91562/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91512, end=91562
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92212_92262/extraction_complete.flag
+    jobid: 24
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92212_92262/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92212, end=92262
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91462_91512/extraction_complete.flag
+    jobid: 9
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91462_91512/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91462, end=91512
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91412_91462/extraction_complete.flag
+    jobid: 8
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91412_91462/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91412, end=91462
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92162_92212/extraction_complete.flag
+    jobid: 23
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92162_92212/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92162, end=92212
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91362_91412/extraction_complete.flag
+    jobid: 6
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91362_91412/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=91362, end=91412
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:42:28 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92112_92162/extraction_complete.flag
+    jobid: 22
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92112_92162/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    wildcards: start=92112, end=92162
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91912             --canal_end 91962             --chunk_id 91912_91962' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 18
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91912_91962/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91912             --canal_end 91962             --chunk_id 91912_91962
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92412             --canal_end 92462             --chunk_id 92412_92462' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 28
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92412_92462/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92412             --canal_end 92462             --chunk_id 92412_92462
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92512             --canal_end 92547             --chunk_id 92512_92547' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 30
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92512_92547/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92512             --canal_end 92547             --chunk_id 92512_92547
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92112             --canal_end 92162             --chunk_id 92112_92162' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 22
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92112_92162/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92112             --canal_end 92162             --chunk_id 92112_92162
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91562             --canal_end 91612             --chunk_id 91562_91612' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 11
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91562_91612/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91562             --canal_end 91612             --chunk_id 91562_91612
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92012             --canal_end 92062             --chunk_id 92012_92062' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 20
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92012_92062/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92012             --canal_end 92062             --chunk_id 92012_92062
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92462             --canal_end 92512             --chunk_id 92462_92512' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 29
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92462_92512/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92462             --canal_end 92512             --chunk_id 92462_92512
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91362             --canal_end 91412             --chunk_id 91362_91412' returned non-zero exit status 1.
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92162             --canal_end 92212             --chunk_id 92162_92212' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 6
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91362_91412/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91362             --canal_end 91412             --chunk_id 91362_91412
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 23
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92162_92212/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92162             --canal_end 92212             --chunk_id 92162_92212
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92062             --canal_end 92112             --chunk_id 92062_92112' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 21
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92062_92112/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92062             --canal_end 92112             --chunk_id 92062_92112
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91712             --canal_end 91762             --chunk_id 91712_91762' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 14
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91712_91762/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91712             --canal_end 91762             --chunk_id 91712_91762
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92212             --canal_end 92262             --chunk_id 92212_92262' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 24
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92212_92262/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92212             --canal_end 92262             --chunk_id 92212_92262
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91412             --canal_end 91462             --chunk_id 91412_91462' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 8
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91412_91462/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91412             --canal_end 91462             --chunk_id 91412_91462
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91862             --canal_end 91912             --chunk_id 91862_91912' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 17
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91862_91912/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91862             --canal_end 91912             --chunk_id 91862_91912
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91812             --canal_end 91862             --chunk_id 91812_91862' returned non-zero exit status 1.
+[Mon Feb 16 14:42:33 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 16
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91812_91862/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91812             --canal_end 91862             --chunk_id 91812_91862
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91462             --canal_end 91512             --chunk_id 91462_91512' returned non-zero exit status 1.
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 9
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91462_91512/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91462             --canal_end 91512             --chunk_id 91462_91512
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91662             --canal_end 91712             --chunk_id 91662_91712' returned non-zero exit status 1.
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 13
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91662_91712/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91662             --canal_end 91712             --chunk_id 91662_91712
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91962             --canal_end 92012             --chunk_id 91962_92012' returned non-zero exit status 1.
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 19
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91962_92012/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91962             --canal_end 92012             --chunk_id 91962_92012
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91512             --canal_end 91562             --chunk_id 91512_91562' returned non-zero exit status 1.
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92362             --canal_end 92412             --chunk_id 92362_92412' returned non-zero exit status 1.
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 10
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91512_91562/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91512             --canal_end 91562             --chunk_id 91512_91562
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 27
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92362_92412/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92362             --canal_end 92412             --chunk_id 92362_92412
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92262             --canal_end 92312             --chunk_id 92262_92312' returned non-zero exit status 1.
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 25
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92262_92312/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92262             --canal_end 92312             --chunk_id 92262_92312
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91762             --canal_end 91812             --chunk_id 91762_91812' returned non-zero exit status 1.
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 15
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91762_91812/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91762             --canal_end 91812             --chunk_id 91762_91812
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92312             --canal_end 92362             --chunk_id 92312_92362' returned non-zero exit status 1.
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 26
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92312_92362/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92312             --canal_end 92362             --chunk_id 92312_92362
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 104:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91612             --canal_end 91662             --chunk_id 91612_91662' returned non-zero exit status 1.
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 12
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91612_91662/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91612             --canal_end 91662             --chunk_id 91612_91662
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 21
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92062_92112/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92062             --canal_end 92112             --chunk_id 92062_92112
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 20
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92012_92062/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92012             --canal_end 92062             --chunk_id 92012_92062
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 19
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91962_92012/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91962             --canal_end 92012             --chunk_id 91962_92012
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 18
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91912_91962/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91912             --canal_end 91962             --chunk_id 91912_91962
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 17
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91862_91912/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91862             --canal_end 91912             --chunk_id 91862_91912
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 16
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91812_91862/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91812             --canal_end 91862             --chunk_id 91812_91862
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 15
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91762_91812/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91762             --canal_end 91812             --chunk_id 91762_91812
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 30
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92512_92547/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92512             --canal_end 92547             --chunk_id 92512_92547
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 14
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91712_91762/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91712             --canal_end 91762             --chunk_id 91712_91762
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 29
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92462_92512/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92462             --canal_end 92512             --chunk_id 92462_92512
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 13
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91662_91712/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91662             --canal_end 91712             --chunk_id 91662_91712
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 28
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92412_92462/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92412             --canal_end 92462             --chunk_id 92412_92462
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 12
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91612_91662/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91612             --canal_end 91662             --chunk_id 91612_91662
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 27
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92362_92412/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92362             --canal_end 92412             --chunk_id 92362_92412
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 11
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91562_91612/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91562             --canal_end 91612             --chunk_id 91562_91612
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 26
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92312_92362/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92312             --canal_end 92362             --chunk_id 92312_92362
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 25
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92262_92312/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92262             --canal_end 92312             --chunk_id 92262_92312
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 10
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91512_91562/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91512             --canal_end 91562             --chunk_id 91512_91562
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 24
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92212_92262/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92212             --canal_end 92262             --chunk_id 92212_92262
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 9
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91462_91512/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91462             --canal_end 91512             --chunk_id 91462_91512
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 8
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91412_91462/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91412             --canal_end 91462             --chunk_id 91412_91462
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 23
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92162_92212/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92162             --canal_end 92212             --chunk_id 92162_92212
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 6
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91362_91412/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 91362             --canal_end 91412             --chunk_id 91362_91412
+        
+        (command exited with non-zero exit code)
+[Mon Feb 16 14:42:34 2026]
+Error in rule extract_chunk:
+    message: None
+    jobid: 22
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92112_92162/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-south             --canal_start 92112             --canal_end 92162             --chunk_id 92112_92162
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/SOGRAIN2.0/pipeline_chunking/.snakemake/log/2026-02-16T132054.268144.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

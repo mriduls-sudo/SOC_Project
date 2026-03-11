@@ -1,0 +1,25 @@
+Config file config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-8.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+plan         1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+[Mon Feb 16 16:08:08 2026]
+localrule plan:
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    jobid: 0
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:09:18 2026]
+Finished jobid: 0 (Rule: plan)
+1 of 1 steps (100%) done
+Complete log(s): /home/mriduls/SOGRAIN2.0/pipeline_chunking/.snakemake/log/2026-02-16T160808.650978.snakemake.log

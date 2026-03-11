@@ -1,0 +1,24 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+save_run_metadata        1
+total                    1
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 07:08:48 2026]
+localrule save_run_metadata:
+    output: run_metadata/run_config.yaml
+    jobid: 0
+    reason: Missing output files: run_metadata/run_config.yaml
+    resources: tmpdir=/tmp
+[Sun Feb 15 07:08:50 2026]
+Finished jobid: 0 (Rule: save_run_metadata)
+1 of 1 steps (100%) done
+Complete log(s): /home/mriduls/swot_play/SOGRAIN2.0/pipeline/.snakemake/log/2026-02-15T070848.523575.snakemake.log

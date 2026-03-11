@@ -1,0 +1,24 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+cleanup_pixc        1
+compute             1
+dem                 1
+extract             1
+plan                1
+total               6
+
+Select jobs to execute...
+Execute 1 jobs...
+RuleException in rule plan in file "/home/mriduls/swot_play/SOGRAIN2.0/pipeline/Snakefile", line 8:
+NameError: The name '"region_name"' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region {config["region_name"]}
+        

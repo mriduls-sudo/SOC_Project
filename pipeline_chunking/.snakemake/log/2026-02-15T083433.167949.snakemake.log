@@ -1,0 +1,36 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-8.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+cleanup_pixc             1
+compute                  1
+dem                      1
+extract                  1
+plan                     1
+save_run_metadata        1
+total                    7
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: Pulp: Error while trying to execute, use msg=True for more detailscbc
+Execute 2 jobs...
+[Sun Feb 15 08:34:34 2026]
+localrule plan:
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    jobid: 5
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:34:34 2026]
+localrule save_run_metadata:
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/run_metadata/run_config.yaml
+    jobid: 6
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/run_metadata/run_config.yaml
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:34:36 2026]
+Finished jobid: 6 (Rule: save_run_metadata)
+1 of 7 steps (14%) done

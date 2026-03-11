@@ -1,0 +1,65 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-8.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+cleanup_pixc             1
+compute                  1
+dem                      1
+extract                  1
+plan                     1
+save_run_metadata        1
+total                    7
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: Pulp: Error while trying to execute, use msg=True for more detailscbc
+Execute 2 jobs...
+[Sun Feb 15 08:06:23 2026]
+localrule plan:
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_planning/pixc_to_grains.json
+    jobid: 5
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:06:23 2026]
+localrule save_run_metadata:
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/run_metadata/run_config.yaml
+    jobid: 6
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/run_metadata/run_config.yaml
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline/Snakefile", line 48:
+Command 'set -euo pipefail;  
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region us-west             --canal_start 1             --canal_end 5' returned non-zero exit status 2.
+[Sun Feb 15 08:06:25 2026]
+Error in rule plan:
+    message: None
+    jobid: 5
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_planning/pixc_to_grains.json
+    shell:
+        
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region us-west             --canal_start 1             --canal_end 5
+        
+        (command exited with non-zero exit code)
+[Sun Feb 15 08:06:25 2026]
+Finished jobid: 6 (Rule: save_run_metadata)
+1 of 7 steps (14%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sun Feb 15 08:06:25 2026]
+Error in rule plan:
+    message: None
+    jobid: 5
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_planning/pixc_to_grains.json
+    shell:
+        
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region us-west             --canal_start 1             --canal_end 5
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/SOGRAIN2.0/pipeline/.snakemake/log/2026-02-15T080622.175589.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

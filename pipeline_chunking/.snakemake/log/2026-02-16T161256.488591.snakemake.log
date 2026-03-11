@@ -1,0 +1,279 @@
+Config file config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-8.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+cleanup_pixc               1
+compute                    1
+dem                        1
+extract_chunk             50
+merge_chunks               1
+wait_for_all_chunks        1
+total                     56
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: Pulp: Error while trying to execute, use msg=True for more detailscbc
+Execute 32 jobs...
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1106_1206/extraction_complete.flag
+    jobid: 18
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1106_1206/extraction_complete.flag
+    wildcards: start=1106, end=1206
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2606_2706/extraction_complete.flag
+    jobid: 33
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2606_2706/extraction_complete.flag
+    wildcards: start=2606, end=2706
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4106_4206/extraction_complete.flag
+    jobid: 48
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4106_4206/extraction_complete.flag
+    wildcards: start=4106, end=4206
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1006_1106/extraction_complete.flag
+    jobid: 17
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1006_1106/extraction_complete.flag
+    wildcards: start=1006, end=1106
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2506_2606/extraction_complete.flag
+    jobid: 32
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2506_2606/extraction_complete.flag
+    wildcards: start=2506, end=2606
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4006_4106/extraction_complete.flag
+    jobid: 47
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4006_4106/extraction_complete.flag
+    wildcards: start=4006, end=4106
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_906_1006/extraction_complete.flag
+    jobid: 16
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_906_1006/extraction_complete.flag
+    wildcards: start=906, end=1006
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2406_2506/extraction_complete.flag
+    jobid: 31
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2406_2506/extraction_complete.flag
+    wildcards: start=2406, end=2506
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3906_4006/extraction_complete.flag
+    jobid: 46
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3906_4006/extraction_complete.flag
+    wildcards: start=3906, end=4006
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3806_3906/extraction_complete.flag
+    jobid: 45
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3806_3906/extraction_complete.flag
+    wildcards: start=3806, end=3906
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_806_906/extraction_complete.flag
+    jobid: 15
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_806_906/extraction_complete.flag
+    wildcards: start=806, end=906
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2306_2406/extraction_complete.flag
+    jobid: 30
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2306_2406/extraction_complete.flag
+    wildcards: start=2306, end=2406
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3706_3806/extraction_complete.flag
+    jobid: 44
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3706_3806/extraction_complete.flag
+    wildcards: start=3706, end=3806
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_706_806/extraction_complete.flag
+    jobid: 14
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_706_806/extraction_complete.flag
+    wildcards: start=706, end=806
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2206_2306/extraction_complete.flag
+    jobid: 29
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2206_2306/extraction_complete.flag
+    wildcards: start=2206, end=2306
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2106_2206/extraction_complete.flag
+    jobid: 28
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2106_2206/extraction_complete.flag
+    wildcards: start=2106, end=2206
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:57 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3606_3706/extraction_complete.flag
+    jobid: 43
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3606_3706/extraction_complete.flag
+    wildcards: start=3606, end=3706
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_606_706/extraction_complete.flag
+    jobid: 13
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_606_706/extraction_complete.flag
+    wildcards: start=606, end=706
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2006_2106/extraction_complete.flag
+    jobid: 27
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_2006_2106/extraction_complete.flag
+    wildcards: start=2006, end=2106
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3506_3606/extraction_complete.flag
+    jobid: 42
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3506_3606/extraction_complete.flag
+    wildcards: start=3506, end=3606
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_506_606/extraction_complete.flag
+    jobid: 12
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_506_606/extraction_complete.flag
+    wildcards: start=506, end=606
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_406_506/extraction_complete.flag
+    jobid: 11
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_406_506/extraction_complete.flag
+    wildcards: start=406, end=506
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1906_2006/extraction_complete.flag
+    jobid: 26
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1906_2006/extraction_complete.flag
+    wildcards: start=1906, end=2006
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3406_3506/extraction_complete.flag
+    jobid: 41
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3406_3506/extraction_complete.flag
+    wildcards: start=3406, end=3506
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4906_5000/extraction_complete.flag
+    jobid: 56
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4906_5000/extraction_complete.flag
+    wildcards: start=4906, end=5000
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_306_406/extraction_complete.flag
+    jobid: 10
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_306_406/extraction_complete.flag
+    wildcards: start=306, end=406
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1806_1906/extraction_complete.flag
+    jobid: 25
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1806_1906/extraction_complete.flag
+    wildcards: start=1806, end=1906
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3306_3406/extraction_complete.flag
+    jobid: 40
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_3306_3406/extraction_complete.flag
+    wildcards: start=3306, end=3406
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4806_4906/extraction_complete.flag
+    jobid: 55
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4806_4906/extraction_complete.flag
+    wildcards: start=4806, end=4906
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4706_4806/extraction_complete.flag
+    jobid: 54
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_4706_4806/extraction_complete.flag
+    wildcards: start=4706, end=4806
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_206_306/extraction_complete.flag
+    jobid: 9
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_206_306/extraction_complete.flag
+    wildcards: start=206, end=306
+    resources: tmpdir=/tmp
+[Mon Feb 16 16:12:58 2026]
+localrule extract_chunk:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1706_1806/extraction_complete.flag
+    jobid: 24
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_6_to_5000/extracted_points/chunk_1706_1806/extraction_complete.flag
+    wildcards: start=1706, end=1806
+    resources: tmpdir=/tmp
+Select jobs to execute...

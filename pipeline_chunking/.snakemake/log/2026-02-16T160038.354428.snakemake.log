@@ -1,0 +1,3 @@
+KeyError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 11:
+'region_name'
+  File "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 11, in <module>

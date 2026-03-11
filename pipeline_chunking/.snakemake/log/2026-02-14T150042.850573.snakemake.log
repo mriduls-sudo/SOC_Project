@@ -1,0 +1,54 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+cleanup_pixc        1
+compute             1
+dem                 1
+extract             1
+plan                1
+total               6
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Feb 14 15:00:43 2026]
+localrule plan:
+    output: pixc_planning/pixc_to_grains.json
+    jobid: 5
+    reason: Missing output files: pixc_planning/pixc_to_grains.json; Code has changed since last execution
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/home/mriduls/swot_play/SOGRAIN2.0/pipeline/Snakefile", line 15:
+Command 'set -euo pipefail;  
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region us-pacific' returned non-zero exit status 1.
+[Sat Feb 14 15:00:47 2026]
+Error in rule plan:
+    message: None
+    jobid: 5
+    output: pixc_planning/pixc_to_grains.json
+    shell:
+        
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region us-pacific
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sat Feb 14 15:00:47 2026]
+Error in rule plan:
+    message: None
+    jobid: 5
+    output: pixc_planning/pixc_to_grains.json
+    shell:
+        
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region us-pacific
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/swot_play/SOGRAIN2.0/pipeline/.snakemake/log/2026-02-14T150042.850573.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

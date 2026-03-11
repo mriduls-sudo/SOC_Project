@@ -1,0 +1,25 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-7.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+cleanup_pixc        1
+compute             1
+dem                 1
+extract             1
+total               5
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 20:51:35 2026]
+localrule extract:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/extracted_points/extraction_complete.flag
+    jobid: 4
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/extracted_points/extraction_complete.flag
+    resources: tmpdir=/tmp

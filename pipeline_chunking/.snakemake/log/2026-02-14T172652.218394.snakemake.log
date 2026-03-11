@@ -1,0 +1,46 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+cleanup_pixc        1
+compute             1
+dem                 1
+extract             1
+total               5
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Feb 14 17:26:52 2026]
+localrule extract:
+    input: pixc_planning/pixc_to_grains.json
+    output: extracted_points/extraction_complete.flag
+    jobid: 4
+    reason: Missing output files: extracted_points/extraction_complete.flag
+    resources: tmpdir=/tmp
+Waiting at most 5 seconds for missing files:
+extracted_points/extraction_complete.flag (missing locally)
+MissingOutputException in rule extract in file "/home/mriduls/swot_play/SOGRAIN2.0/pipeline/Snakefile", line 25:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+extracted_points/extraction_complete.flag (missing locally, parent dir contents: USA_783700_00003.parquet, USA_783700_00005.parquet, USA_783700_00002.parquet, USA_783700_00004.parquet)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sat Feb 14 17:31:51 2026]
+Error in rule extract:
+    message: None
+    jobid: 4
+    input: pixc_planning/pixc_to_grains.json
+    output: extracted_points/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-pacific             --canal_start 1             --canal_end 5
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/swot_play/SOGRAIN2.0/pipeline/.snakemake/log/2026-02-14T172652.218394.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

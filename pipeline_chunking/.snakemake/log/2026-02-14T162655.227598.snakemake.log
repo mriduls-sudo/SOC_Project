@@ -1,0 +1,56 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+cleanup_pixc        1
+compute             1
+dem                 1
+extract             1
+plan                1
+total               6
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Feb 14 16:26:55 2026]
+localrule plan:
+    output: pixc_planning/pixc_to_grains.json
+    jobid: 5
+    reason: Missing output files: pixc_planning/pixc_to_grains.json; Code has changed since last execution
+    resources: tmpdir=/tmp
+[Sat Feb 14 16:51:17 2026]
+Finished jobid: 5 (Rule: plan)
+1 of 6 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat Feb 14 16:51:17 2026]
+localrule extract:
+    input: pixc_planning/pixc_to_grains.json
+    output: extracted_points/extraction_complete.flag
+    jobid: 4
+    reason: Missing output files: extracted_points/extraction_complete.flag; Input files updated by another job: pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+Terminating processes on user request, this might take some time.
+RuleException:
+CalledProcessError in file "/home/mriduls/swot_play/SOGRAIN2.0/pipeline/Snakefile", line 31:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-pacific             --canal_start 1             --canal_end 5' died with <Signals.SIGINT: 2>.
+[Sat Feb 14 17:00:54 2026]
+Error in rule extract:
+    message: None
+    jobid: 4
+    input: pixc_planning/pixc_to_grains.json
+    output: extracted_points/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-pacific             --canal_start 1             --canal_end 5
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/swot_play/SOGRAIN2.0/pipeline/.snakemake/log/2026-02-14T162655.227598.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

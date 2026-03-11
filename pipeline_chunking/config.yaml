@@ -1,0 +1,56 @@
+base_grain_dir: /water1/mriduls/SOGRAIN_Analysis/GRAIN_v.1.0/GeoParquet
+base_gee_asset: projects/ee-mriduls/assets/GRAIN
+run_base_dir: /water1/mriduls/SOGRAIN_Analysis
+# ----------------------------------------
+# PIXC Planning
+# ----------------------------------------
+
+pixc_short_name: SWOT_L2_HR_PIXC_2.0
+
+start_date: "2024-01-01"
+end_date: "2024-12-31"
+
+planning_dir: pixc_planning
+download_dir: pixc_downloads
+
+
+# ----------------------------------------
+# Extraction
+# ----------------------------------------
+
+extracted_points_dir: extracted_points
+buffer_m: 200
+
+
+# ----------------------------------------
+# WSE Computation
+# ----------------------------------------
+
+metrics_dir: metrics
+
+bin_width_m: 50
+classification: [3, 4]
+
+cross_track_min_m: 10000
+cross_track_max_m: 60000
+
+min_bins_required: 5
+
+
+# ----------------------------------------
+# DEM Sampling
+# ----------------------------------------
+
+gee_grain_asset: projects/ee-mriduls/assets/GRAIN/{region_name}_GRAIN_canals
+dem_spacing_m: 50
+dem_scale_m: 30
+
+gcs_bucket: gee-sograincanals-intermediate-step
+gcp_project: swot-work1
+
+
+# ----------------------------------------
+# Slope Sign Logic
+# ----------------------------------------
+
+slope_sign_tolerance: 1e-6

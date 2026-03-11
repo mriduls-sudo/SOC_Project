@@ -1,0 +1,87 @@
+Config file config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-5.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=Resource("mem_mb", 140000)
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+cleanup_pixc               1
+compute                    1
+dem                        1
+extract_chunk              7
+merge_chunks               1
+wait_for_all_chunks        1
+total                     13
+
+Select jobs to execute...
+Execute 7 jobs...
+[Fri Feb 20 17:28:11 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_5154_5604/extraction_complete.flag
+    jobid: 18
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_5154_5604/extraction_complete.flag
+    wildcards: start=5154, end=5604
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Fri Feb 20 17:28:11 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11904_12354/extraction_complete.flag
+    jobid: 33
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11904_12354/extraction_complete.flag
+    wildcards: start=11904, end=12354
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Fri Feb 20 17:28:11 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11454_11904/extraction_complete.flag
+    jobid: 32
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11454_11904/extraction_complete.flag
+    wildcards: start=11454, end=11904
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Fri Feb 20 17:28:11 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_4704_5154/extraction_complete.flag
+    jobid: 17
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_4704_5154/extraction_complete.flag
+    wildcards: start=4704, end=5154
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Fri Feb 20 17:28:11 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11004_11454/extraction_complete.flag
+    jobid: 31
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_11004_11454/extraction_complete.flag
+    wildcards: start=11004, end=11454
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Fri Feb 20 17:28:11 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_2454_2904/extraction_complete.flag
+    jobid: 12
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_2454_2904/extraction_complete.flag
+    wildcards: start=2454, end=2904
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Fri Feb 20 17:28:11 2026]
+localrule extract_chunk:
+    input: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/pixc_planning/pixc_to_grains.json
+    output: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_15954_16404/extraction_complete.flag
+    jobid: 42
+    reason: Missing output files: /water1/mriduls/SOGRAIN_Analysis/us-south_from_204_to_25711/extracted_points/chunk_15954_16404/extraction_complete.flag
+    wildcards: start=15954, end=16404
+    resources: tmpdir=/tmp, mem_mb=8000, mem=8 GB, mem_mib=7630
+[Fri Feb 20 23:01:42 2026]
+Finished jobid: 42 (Rule: extract_chunk)
+1 of 13 steps (8%) done
+[Fri Feb 20 23:25:08 2026]
+Finished jobid: 33 (Rule: extract_chunk)
+2 of 13 steps (15%) done
+[Fri Feb 20 23:30:51 2026]
+Finished jobid: 32 (Rule: extract_chunk)
+3 of 13 steps (23%) done

@@ -1,0 +1,88 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-8.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+all                 1
+cleanup_pixc        1
+compute             1
+dem                 1
+extract             1
+plan                1
+total               6
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 08:12:07 2026]
+localrule plan:
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_planning/pixc_to_grains.json
+    jobid: 5
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:19:05 2026]
+Finished jobid: 5 (Rule: plan)
+1 of 6 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 08:19:05 2026]
+localrule extract:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_planning/pixc_to_grains.json
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/extracted_points/extraction_complete.flag
+    jobid: 4
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/extracted_points/extraction_complete.flag; Input files updated by another job: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:23:31 2026]
+Finished jobid: 4 (Rule: extract)
+2 of 6 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 08:23:31 2026]
+localrule cleanup_pixc:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/extracted_points/extraction_complete.flag
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_downloads/cleanup_complete.flag
+    jobid: 3
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_downloads/cleanup_complete.flag; Input files updated by another job: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/extracted_points/extraction_complete.flag
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:23:40 2026]
+Finished jobid: 3 (Rule: cleanup_pixc)
+3 of 6 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 08:23:40 2026]
+localrule compute:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_downloads/cleanup_complete.flag
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/metrics/wse_metrics.csv
+    jobid: 2
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/metrics/wse_metrics.csv; Input files updated by another job: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/pixc_downloads/cleanup_complete.flag
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:23:42 2026]
+Finished jobid: 2 (Rule: compute)
+4 of 6 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 08:23:42 2026]
+localrule dem:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/metrics/wse_metrics.csv
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/metrics/wse_dem_slope_comparison.csv
+    jobid: 1
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/metrics/wse_dem_slope_comparison.csv; Input files updated by another job: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/metrics/wse_metrics.csv
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:24:18 2026]
+Finished jobid: 1 (Rule: dem)
+5 of 6 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 08:24:18 2026]
+localrule all:
+    input: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/metrics/wse_dem_slope_comparison.csv, /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/run_metadata/run_config.yaml
+    jobid: 0
+    reason: Input files updated by another job: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5/metrics/wse_dem_slope_comparison.csv
+    resources: tmpdir=/tmp
+[Sun Feb 15 08:24:18 2026]
+Finished jobid: 0 (Rule: all)
+6 of 6 steps (100%) done
+Complete log(s): /home/mriduls/SOGRAIN2.0/pipeline/.snakemake/log/2026-02-15T081206.936995.snakemake.log

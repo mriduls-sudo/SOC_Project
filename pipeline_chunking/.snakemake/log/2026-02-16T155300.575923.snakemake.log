@@ -1,0 +1,57 @@
+Config file config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-8.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+cleanup_pixc               1
+compute                    1
+dem                        1
+extract_chunk             50
+merge_chunks               1
+plan                       1
+save_run_metadata          1
+wait_for_all_chunks        1
+total                     58
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: Pulp: Error while trying to execute, use msg=True for more detailscbc
+Execute 2 jobs...
+[Mon Feb 16 15:53:02 2026]
+localrule save_run_metadata:
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5000/run_metadata/run_config.yaml
+    jobid: 57
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5000/run_metadata/run_config.yaml
+    resources: tmpdir=/tmp
+[Mon Feb 16 15:53:02 2026]
+localrule plan:
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5000/pixc_planning/pixc_to_grains.json
+    jobid: 7
+    reason: Missing output files: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5000/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+[Mon Feb 16 15:53:04 2026]
+Finished jobid: 57 (Rule: save_run_metadata)
+1 of 58 steps (2%) done
+Terminating processes on user request, this might take some time.
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline_chunking/Snakefile", line 83:
+Command 'set -euo pipefail;  
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region us-west             --canal_start 1             --canal_end 5000' died with <Signals.SIGINT: 2>.
+[Mon Feb 16 15:53:36 2026]
+Error in rule plan:
+    message: None
+    jobid: 7
+    output: /iqra/mriduls/SOGRAIN_Analysis/us-west_from_1_to_5000/pixc_planning/pixc_to_grains.json
+    shell:
+        
+        python scripts/plan_and_download_pixc.py             --config config.yaml             --region us-west             --canal_start 1             --canal_end 5000
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/SOGRAIN2.0/pipeline_chunking/.snakemake/log/2026-02-16T155300.575923.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

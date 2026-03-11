@@ -1,0 +1,260 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-7.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+cleanup_pixc               1
+compute                    1
+dem                        1
+extract_chunk             24
+merge_chunks               1
+wait_for_all_chunks        1
+total                     30
+
+Select jobs to execute...
+Execute 24 jobs...
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92062_92112/extraction_complete.flag
+    jobid: 21
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92062_92112/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92062, end=92112
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92012_92062/extraction_complete.flag
+    jobid: 20
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92012_92062/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92012, end=92062
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91962_92012/extraction_complete.flag
+    jobid: 19
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91962_92012/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91962, end=92012
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91912_91962/extraction_complete.flag
+    jobid: 18
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91912_91962/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91912, end=91962
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91862_91912/extraction_complete.flag
+    jobid: 17
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91862_91912/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91862, end=91912
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91812_91862/extraction_complete.flag
+    jobid: 16
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91812_91862/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91812, end=91862
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91762_91812/extraction_complete.flag
+    jobid: 15
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91762_91812/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91762, end=91812
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92512_92547/extraction_complete.flag
+    jobid: 30
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92512_92547/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92512, end=92547
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91712_91762/extraction_complete.flag
+    jobid: 14
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91712_91762/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91712, end=91762
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92462_92512/extraction_complete.flag
+    jobid: 29
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92462_92512/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92462, end=92512
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91662_91712/extraction_complete.flag
+    jobid: 13
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91662_91712/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91662, end=91712
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92412_92462/extraction_complete.flag
+    jobid: 28
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92412_92462/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92412, end=92462
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91612_91662/extraction_complete.flag
+    jobid: 12
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91612_91662/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91612, end=91662
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92362_92412/extraction_complete.flag
+    jobid: 27
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92362_92412/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92362, end=92412
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91562_91612/extraction_complete.flag
+    jobid: 11
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91562_91612/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91562, end=91612
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92312_92362/extraction_complete.flag
+    jobid: 26
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92312_92362/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92312, end=92362
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92262_92312/extraction_complete.flag
+    jobid: 25
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92262_92312/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92262, end=92312
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91512_91562/extraction_complete.flag
+    jobid: 10
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91512_91562/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91512, end=91562
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92212_92262/extraction_complete.flag
+    jobid: 24
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92212_92262/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92212, end=92262
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91462_91512/extraction_complete.flag
+    jobid: 9
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91462_91512/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91462, end=91512
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91412_91462/extraction_complete.flag
+    jobid: 8
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91412_91462/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91412, end=91462
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92162_92212/extraction_complete.flag
+    jobid: 23
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92162_92212/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92162, end=92212
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91362_91412/extraction_complete.flag
+    jobid: 6
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_91362_91412/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=91362, end=91412
+    resources: tmpdir=/tmp
+[Mon Feb 16 14:52:25 2026]
+localrule extract_chunk:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92112_92162/extraction_complete.flag
+    jobid: 22
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-south_from_91362_to_92547/extracted_points/chunk_92112_92162/extraction_complete.flag; Code has changed since last execution
+    wildcards: start=92112, end=92162
+    resources: tmpdir=/tmp
+[Mon Feb 16 15:00:56 2026]
+Finished jobid: 21 (Rule: extract_chunk)
+1 of 30 steps (3%) done
+[Mon Feb 16 15:00:59 2026]
+Finished jobid: 14 (Rule: extract_chunk)
+2 of 30 steps (7%) done
+[Mon Feb 16 15:01:00 2026]
+Finished jobid: 17 (Rule: extract_chunk)
+3 of 30 steps (10%) done
+[Mon Feb 16 15:01:00 2026]
+Finished jobid: 16 (Rule: extract_chunk)
+4 of 30 steps (13%) done
+[Mon Feb 16 15:01:00 2026]
+Finished jobid: 19 (Rule: extract_chunk)
+5 of 30 steps (17%) done
+[Mon Feb 16 15:01:10 2026]
+Finished jobid: 18 (Rule: extract_chunk)
+6 of 30 steps (20%) done
+[Mon Feb 16 15:01:19 2026]
+Finished jobid: 15 (Rule: extract_chunk)
+7 of 30 steps (23%) done
+[Mon Feb 16 15:01:56 2026]
+Finished jobid: 20 (Rule: extract_chunk)
+8 of 30 steps (27%) done
+[Mon Feb 16 15:02:23 2026]
+Finished jobid: 24 (Rule: extract_chunk)
+9 of 30 steps (30%) done
+[Mon Feb 16 15:06:06 2026]
+Finished jobid: 22 (Rule: extract_chunk)
+10 of 30 steps (33%) done
+[Mon Feb 16 15:08:17 2026]
+Finished jobid: 26 (Rule: extract_chunk)
+11 of 30 steps (37%) done
+[Mon Feb 16 15:09:08 2026]
+Finished jobid: 27 (Rule: extract_chunk)
+12 of 30 steps (40%) done
+[Mon Feb 16 15:13:32 2026]
+Finished jobid: 25 (Rule: extract_chunk)
+13 of 30 steps (43%) done
+[Mon Feb 16 15:15:49 2026]
+Finished jobid: 13 (Rule: extract_chunk)
+14 of 30 steps (47%) done
+[Mon Feb 16 15:21:35 2026]
+Finished jobid: 23 (Rule: extract_chunk)
+15 of 30 steps (50%) done
+[Mon Feb 16 15:22:11 2026]
+Finished jobid: 29 (Rule: extract_chunk)
+16 of 30 steps (53%) done

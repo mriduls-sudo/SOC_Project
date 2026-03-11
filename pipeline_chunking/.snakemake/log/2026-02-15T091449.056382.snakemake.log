@@ -1,0 +1,66 @@
+Assuming unrestricted shared filesystem usage.
+host: f-hossain-7.ce.washington.edu
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+cleanup_pixc             1
+compute                  1
+dem                      1
+extract                  1
+plan                     1
+save_run_metadata        1
+total                    7
+
+Select jobs to execute...
+Execute 2 jobs...
+[Sun Feb 15 09:14:49 2026]
+localrule plan:
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/pixc_planning/pixc_to_grains.json
+    jobid: 5
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+[Sun Feb 15 09:14:49 2026]
+localrule save_run_metadata:
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/run_metadata/run_config.yaml
+    jobid: 6
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/run_metadata/run_config.yaml
+    resources: tmpdir=/tmp
+[Sun Feb 15 09:14:51 2026]
+Finished jobid: 6 (Rule: save_run_metadata)
+1 of 7 steps (14%) done
+[Sun Feb 15 20:25:50 2026]
+Finished jobid: 5 (Rule: plan)
+2 of 7 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Feb 15 20:25:50 2026]
+localrule extract:
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/extracted_points/extraction_complete.flag
+    jobid: 4
+    reason: Missing output files: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/extracted_points/extraction_complete.flag; Input files updated by another job: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/pixc_planning/pixc_to_grains.json
+    resources: tmpdir=/tmp
+Terminating processes on user request, this might take some time.
+RuleException:
+CalledProcessError in file "/home/mriduls/SOGRAIN2.0/pipeline/Snakefile", line 63:
+Command 'set -euo pipefail;  
+        python scripts/extract_points.py             --config config.yaml             --region us-pacific             --canal_start 1             --canal_end 682' died with <Signals.SIGINT: 2>.
+[Sun Feb 15 20:49:55 2026]
+Error in rule extract:
+    message: None
+    jobid: 4
+    input: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/pixc_planning/pixc_to_grains.json
+    output: /tiger2/mriduls/SOGRAIN_Analysis/us-pacific_from_1_to_682/extracted_points/extraction_complete.flag
+    shell:
+        
+        python scripts/extract_points.py             --config config.yaml             --region us-pacific             --canal_start 1             --canal_end 682
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/mriduls/SOGRAIN2.0/pipeline/.snakemake/log/2026-02-15T091449.056382.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
