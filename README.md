@@ -1,4 +1,4 @@
-# 🇺🇸 SWOT Irrigation Canal Observability — United States
+# SWOT Irrigation Canal Observability 
 
 **Course Project**  
 **Mridul S, Quan T**
@@ -9,7 +9,7 @@
 
 **How Well Can Irrigation Canals in the United States Be Observed by the Surface Water and Ocean Topography (SWOT) Satellite Mission?**
 
-
+## Background
 
 ## Overview
 
@@ -19,7 +19,7 @@ This project evaluates how effectively the Surface Water and Ocean Topography (S
 
 Using canal geometry from the Global River and Irrigation Network (GRAIN) dataset and satellite-derived surface water observations, we assess canal detectability and generate spatial observability maps for the United States.
 
-
+## Problem Statement
 
 ## Objectives
 
@@ -28,19 +28,18 @@ Using canal geometry from the Global River and Irrigation Network (GRAIN) datase
 - Generate spatial datasets and visualizations of canal observability.  
 - Identify geographic patterns and regional differences in detectability.  
 
+## Datasets Used
 
+## Tools and Packages
 
-## Study Area
-
-- Continental United States (CONUS)  
-- Focus on irrigation-intensive regions (e.g., Western U.S., High Plains)  
-
-
-
-## Project Outputs
+## Project Outputs (Add images)
 
 - Canal-level observability metrics  
 - State and regional summary statistics  
 - Detection confidence maps for CONUS  
 - Visualizations illustrating spatial patterns of canal detectability  
+
+## References
+
+Updates: Information on notebooks used during processing, provide clear indication which notebooks have the final outputs. (Clean up old files in repo)
 
