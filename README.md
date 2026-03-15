@@ -29,7 +29,9 @@ This project evaluates how effectively the Surface Water and Ocean Topography (S
 Using canal geometry from the Global River and Irrigation Network (GRAIN) dataset and satellite-derived surface water observations, we assess canal detectability and generate spatial observability maps for the United States.
 
 ## Problem Statement
-How well can satellites observe the world's irrigation canals? Are canals obervable enough to trigger action and decisions in Irrigation Management? What are the global patterns and statistics of canal observability?
+-How well can satellites observe the world's irrigation canals? 
+-Are canals obervable enough to trigger action and decisions in Irrigation Management? 
+-What are the global patterns and statistics of canal observability?
 
 ## Objectives
 
