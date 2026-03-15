@@ -10,6 +10,15 @@
 **How Well Can Irrigation Canals in the United States Be Observed by the Surface Water and Ocean Topography (SWOT) Satellite Mission?**
 
 ## Background
+Why Irrigation cannals matter
+- Responsible for 40% of worlds food production
+- Used for groundwater recharge and drinking water
+Why not in-situ monitoring?
+- Networks are sparse
+- Monitoring can be expensive
+- Irrigation systems are in developing regions
+Missed Measurements
+- Canals can be narrow, so sattelites can miss them and only focus on rivers and lakes. 
 
 ## Overview
 
@@ -20,6 +29,7 @@ This project evaluates how effectively the Surface Water and Ocean Topography (S
 Using canal geometry from the Global River and Irrigation Network (GRAIN) dataset and satellite-derived surface water observations, we assess canal detectability and generate spatial observability maps for the United States.
 
 ## Problem Statement
+How well can satellites observe the world's irrigation canals? Are canals obervable enough to trigger action and decisions in Irrigation Management? What are the global patterns and statistics of canal observability?
 
 ## Objectives
 
@@ -29,8 +39,12 @@ Using canal geometry from the Global River and Irrigation Network (GRAIN) datase
 - Identify geographic patterns and regional differences in detectability.  
 
 ## Datasets Used
+GRAIN (Global Rgistry of Agricultural Irrigation Networks) https://grain-canals.readthedocs.io/en/latest/
+SWOT (Surface Water and Ocean Topography) Satellite Mission https://swot.jpl.nasa.gov/
 
 ## Tools and Packages
+Notebook with final outputs
+- Final_metrics.ipynb
 
 ## Project Outputs (Add images)
 
@@ -40,6 +54,8 @@ Using canal geometry from the Global River and Irrigation Network (GRAIN) datase
 - Visualizations illustrating spatial patterns of canal detectability  
 
 ## References
-
-Updates: Information on notebooks used during processing, provide clear indication which notebooks have the final outputs. (Clean up old files in repo)
+Suresh, S., Hossain, F., Mishra, V., & Hossain, N. (2026). GRAIN – A global registry of agricultural irrigation networks. 
+  Earth System Science Data, 18, 1855–1891. https://doi.org/10.5194/essd-18-1855-2026
+https://grain-canals.readthedocs.io/en/latest/
+https://swot.jpl.nasa.gov/
 
