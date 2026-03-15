@@ -55,7 +55,9 @@ Notebook with final outputs
 
 ## References
 Suresh, S., Hossain, F., Mishra, V., & Hossain, N. (2026). GRAIN – A global registry of agricultural irrigation networks. 
-  Earth System Science Data, 18, 1855–1891. https://doi.org/10.5194/essd-18-1855-2026
+Earth System Science Data, 18, 1855–1891. https://doi.org/10.5194/essd-18-1855-2026
+
 https://grain-canals.readthedocs.io/en/latest/
+
 https://swot.jpl.nasa.gov/
 
