@@ -52,7 +52,7 @@ Python Packagaes used: xarray, geopandas, shapely, rasterio, pyproj, numpy, pand
 Notebook with final outputs
 - global_plots.ipynb
 
-## Project Outputs (Add images)
+## Project Outputs 
 
 - Canal-level observability metrics  
 - State and regional summary statistics  
