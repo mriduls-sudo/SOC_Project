@@ -126,7 +126,7 @@ def main():
             if canal_geoms[idx].intersects(granule_geom_proj):
                 intersecting_grains.append(str(canal_ids[idx]))
 
-        # ✅ ONLY NOW decide to keep it
+        
         if intersecting_grains:
             pixc_to_grains[granule_name] = intersecting_grains
             unique_results[granule_name] = r

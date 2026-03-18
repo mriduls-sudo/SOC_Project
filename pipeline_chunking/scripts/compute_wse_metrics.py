@@ -57,9 +57,9 @@ def compute_metrics(df, config):
 
     canal_length = d_vals.max() - d_vals.min()
 
-    # -----------------------------
+     
     # Coverage + Continuity
-    # -----------------------------
+     
     bins_sorted = np.sort(df["bin"].unique())
 
     min_bin = bins_sorted.min()
@@ -81,9 +81,9 @@ def compute_metrics(df, config):
 
     contig_frac = max_run / total_possible_bins
 
-    # -----------------------------
+     
     # Signal-to-noise
-    # -----------------------------
+     
     abs_slope = abs(slope)
     signal_amp = abs_slope * canal_length
 
@@ -114,9 +114,9 @@ def parse_args():
 def main():
     args = parse_args()
 
-    # --------------------------------------------------------
+     
     # LOAD CONFIG
-    # --------------------------------------------------------
+     
     config = yaml.safe_load(open(args.config))
 
     run_base = Path(config["run_base_dir"])
@@ -126,9 +126,9 @@ def main():
     out_dir = run_root / config["metrics_dir"]
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # --------------------------------------------------------
-    # FIND ALL PARQUET FILES (RECURSIVE — CHUNK SAFE)
-    # --------------------------------------------------------
+     
+    # FIND ALL PARQUET FILES (RECURSIVELY)
+     
     parquet_files = sorted(input_dir.rglob("*.parquet"))
 
     if not parquet_files:
@@ -139,9 +139,9 @@ def main():
 
     print(f"[INFO] Found {len(parquet_files)} parquet files.")
 
-    # --------------------------------------------------------
+     
     # COMPUTE METRICS PER GRAIN
-    # --------------------------------------------------------
+     
     records = []
 
     for parquet_file in parquet_files:
@@ -165,9 +165,9 @@ def main():
             "Check filtering thresholds or extraction output."
         )
 
-    # --------------------------------------------------------
+     
     # WRITE OUTPUT
-    # --------------------------------------------------------
+     
     out_csv = out_dir / "wse_metrics.csv"
     pd.DataFrame(records).to_csv(out_csv, index=False)
 

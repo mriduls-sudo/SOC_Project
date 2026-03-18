@@ -10,9 +10,8 @@ from google.cloud import storage
 import yaml
 
 
-# -----------------------------
 # Helpers
-# -----------------------------
+
 
 def init_ee():
     try:
@@ -49,9 +48,7 @@ def download_from_gcs(bucket, blob_name, out_path, project):
     print(f"[OK] Downloaded {out_path}")
 
 
-# -----------------------------
-# DEM Sampling Logic
-# -----------------------------
+# DEM Sampling and Slope Comparison
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -87,9 +84,9 @@ def main():
 
     init_ee()
 
-    # -----------------------------
-    # Load canal asset
-    # -----------------------------
+    
+    # Load canal asset from GEE and filter to target canals
+    
     canals = ee.FeatureCollection(gee_asset)
 
     target_canals = canals.filter(
@@ -99,9 +96,9 @@ def main():
     print("[INFO] GEE canal count:",
           target_canals.size().getInfo())
 
-    # -----------------------------
+    
     # Build points along canal
-    # -----------------------------
+    
     SPACING_M = config["dem_spacing_m"]
     DEM_SCALE = config["dem_scale_m"]
 
@@ -129,9 +126,9 @@ def main():
 
     sample_points = target_canals.map(points_along).flatten()
 
-    # -----------------------------
-    # DEM collection
-    # -----------------------------
+    
+    # DEM collection choice and sampling
+    
     dem = (
         ee.ImageCollection("COPERNICUS/DEM/GLO30")
         .mosaic()
@@ -144,9 +141,9 @@ def main():
         geometries=False,
     )
 
-    # -----------------------------
+    
     # Export
-    # -----------------------------
+    
     timestamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     export_name = f"{region}_dem_samples_{timestamp}"
 
@@ -163,9 +160,9 @@ def main():
 
     wait_for_task(task)
 
-    # -----------------------------
+    
     # Download locally
-    # -----------------------------
+    
     local_out = run_root / config["metrics_dir"] / "dem_samples.csv"
 
     download_from_gcs(
@@ -177,9 +174,9 @@ def main():
 
     print("[OK] DEM sampling complete.")
 
-        # -----------------------------
+        
     # Compute DEM slope per canal
-    # -----------------------------
+    
     
 
     TOL = float(config.get("slope_sign_tolerance", 1e-6))
@@ -222,11 +219,11 @@ def main():
 
     dem_slope_df = pd.DataFrame(slope_results)
 
-    # -----------------------------
+    
     # Merge with WSE metrics
-    # -----------------------------
+    
     wse_df = pd.read_csv(metrics_csv)
-    # enforce numeric
+    # enforce numeric type for slope column (in case of any parsing issues)
     wse_df["slope_m_per_m"] = pd.to_numeric(
         wse_df["slope_m_per_m"],
         errors="coerce"
@@ -247,7 +244,7 @@ def main():
         merged["dem_slope_sign"]
     )
 
-    # Optional: classify cases explicitly
+    # For interpretability, categorize slope sign agreement
     merged["slope_sign_category"] = np.where(
         merged["slope_sign_match"],
         "match",

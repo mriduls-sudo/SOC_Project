@@ -19,9 +19,7 @@ from shapely.ops import unary_union
 from pyproj import CRS, Transformer
 
 
-# --------------------------------------------------------
 # ARGUMENTS
-# --------------------------------------------------------
 
 def parse_args():
     p = argparse.ArgumentParser()
@@ -46,9 +44,7 @@ def get_utm_crs_from_lonlat(lon: float, lat: float) -> CRS:
     return CRS.from_epsg(32700 + zone)
 
 
-# --------------------------------------------------------
 # MAIN
-# --------------------------------------------------------
 
 def main():
     args = parse_args()
@@ -64,7 +60,7 @@ def main():
     planning_json = run_root / config["planning_dir"] / "pixc_to_grains.json"
     download_dir = run_root / config["download_dir"]
 
-    # ⬇ chunk-specific output directory
+    # chunk-specific output directory
     out_dir = (
         run_root
         / config["extracted_points_dir"]
@@ -74,9 +70,9 @@ def main():
 
     buffer_m = float(config["buffer_m"])
 
-    # --------------------------------------------------------
-    # LOAD CANALS (ONLY THIS CHUNK)
-    # --------------------------------------------------------
+    
+    # LOAD CANALS (PER CHUNK)
+    
 
     canals = gpd.read_parquet(canals_path)
 
@@ -103,9 +99,9 @@ def main():
     }
     canal_ids_set = set(canal_lookup.keys())
 
-    # --------------------------------------------------------
+    
     # LOAD PLANNING JSON
-    # --------------------------------------------------------
+    
 
     with open(planning_json) as f:
         pixc_to_grains = json.load(f)
@@ -114,10 +110,9 @@ def main():
 
     writers = {}
 
-    # --------------------------------------------------------
+    
     # GRANULE LOOP
-    # --------------------------------------------------------
-
+    
     for pixc_path in sorted(download_dir.glob("*.nc")):
         granule_name = pixc_path.stem
 
