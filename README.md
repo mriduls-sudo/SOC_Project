@@ -48,8 +48,9 @@ GRAIN (Global Rgistry of Agricultural Irrigation Networks) https://grain-canals.
 SWOT (Surface Water and Ocean Topography) Satellite Mission https://swot.jpl.nasa.gov/
 
 ## Tools and Packages
+Python Packagaes used: xarray, geopandas, shapely, rasterio, pyproj, numpy, pandas, matplotlib, and gee (google earth engine).
 Notebook with final outputs
-- Final_metrics.ipynb
+- global_plots.ipynb
 
 ## Project Outputs (Add images)
 
