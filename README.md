@@ -1,7 +1,7 @@
 # SWOT Irrigation Canal Observability 
 
 **Course Project**  
-**Mridul S, Quan T**
+**Mridul S, Quan V**
 
 
 
