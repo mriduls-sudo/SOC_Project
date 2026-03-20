@@ -1,12 +1,12 @@
-# ============================================================
+
 # SOGRAIN 2.0 — Chunked & Scalable Snakefile
-# ============================================================
+
 
 from pathlib import Path
 configfile: "config.yaml"
-# ------------------------------------------------------------
+
 # CONFIG
-# ------------------------------------------------------------
+
 
 REGION = config["region_name"]
 CANAL_START = int(config["canal_start"])
@@ -17,16 +17,16 @@ RUN_ROOT = Path(RUN_BASE) / f"{REGION}_from_{CANAL_START}_to_{CANAL_END}"
 
 CHUNK_SIZE = 500
 
-# ------------------------------------------------------------
+
 # HELPER
-# ------------------------------------------------------------
+
 
 def r(path):
     return RUN_ROOT / path
 
-# ------------------------------------------------------------
+
 # DEFINE CHUNKS DYNAMICALLY
-# ------------------------------------------------------------
+
 
 CHUNKS = [
     (i, min(i + CHUNK_SIZE, CANAL_END))
@@ -36,18 +36,18 @@ CHUNKS = [
 CHUNK_STARTS = [c[0] for c in CHUNKS]
 CHUNK_ENDS   = [c[1] for c in CHUNKS]
 
-# ============================================================
+
 # FINAL TARGET
-# ============================================================
+
 
 rule all:
     input:
         r("metrics/wse_dem_slope_comparison.csv"),
         r("run_metadata/run_config.yaml")
 
-# ============================================================
+
 # SAVE METADATA
-# ============================================================
+
 
 rule save_run_metadata:
     output:
@@ -72,9 +72,9 @@ rule save_run_metadata:
         with open(output[0], "w") as f:
             yaml.dump(meta, f)
 
-# ============================================================
+
 # PLAN (RUNS ONCE)
-# ============================================================
+
 
 rule plan:
     output:
@@ -88,9 +88,9 @@ rule plan:
             --canal_end {CANAL_END}
         """
 
-# ============================================================
+
 # CHUNKED EXTRACTION (PARALLEL)
-# ============================================================
+
 
 rule extract_chunk:
     input:
@@ -115,9 +115,9 @@ rule extract_chunk:
             --canal_end {wildcards.end} \
             --chunk_id {params.chunk_id}
         """
-# ------------------------------------------------------------
+
 # Require all chunk flags
-# ------------------------------------------------------------
+
 
 rule wait_for_all_chunks:
     input:
@@ -132,9 +132,9 @@ rule wait_for_all_chunks:
     shell:
         "touch {output}"
 
-# ============================================================
+
 # MERGE CHUNKS
-# ============================================================
+
 
 rule merge_chunks:
     input:
@@ -147,9 +147,9 @@ rule merge_chunks:
         touch {output}
         """
 
-# ============================================================
+
 # CLEANUP PIXC
-# ============================================================
+
 
 rule cleanup_pixc:
     input:
@@ -164,9 +164,9 @@ rule cleanup_pixc:
         touch {output}
         """
 
-# ============================================================
+
 # COMPUTE METRICS
-# ============================================================
+
 
 rule compute:
     input:
@@ -182,9 +182,9 @@ rule compute:
             --canal_end {CANAL_END}
         """
 
-# ============================================================
+
 # DEM SAMPLING
-# ============================================================
+
 
 rule dem:
     input:
