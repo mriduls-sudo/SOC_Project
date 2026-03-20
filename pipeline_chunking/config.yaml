@@ -1,3 +1,5 @@
+# Location of assets and base directory
+
 base_grain_dir: /water1/mriduls/SOGRAIN_Analysis/GRAIN_v.1.0/GeoParquet
 base_gee_asset: projects/ee-mriduls/assets/GRAIN
 run_base_dir: /water1/mriduls/SOGRAIN_Analysis
